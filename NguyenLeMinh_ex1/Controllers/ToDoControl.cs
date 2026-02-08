@@ -1,5 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using NguyenLeMinh_ex1.Models;
 
 namespace NguyenLeMinh_ex1.Controllers
@@ -8,10 +7,10 @@ namespace NguyenLeMinh_ex1.Controllers
     {
         static List<Todo> todos = new List<Todo>
         {
-            new Todo { Id = 1, TenCongViec = "Đi chợ", HoanThanh = false },
-            new Todo { Id = 2, TenCongViec = "Chơi thể thao", HoanThanh = true },
-            new Todo { Id = 3, TenCongViec = "Chơi game", HoanThanh = false },
-            new Todo { Id = 4, TenCongViec = "Học bài", HoanThanh = true }
+            new Todo { Id = 1, TenCongViec = "Đi chợ", MoTa="Mua đồ ăn", HoanThanh = false },
+            new Todo { Id = 2, TenCongViec = "Chơi thể thao", MoTa="Đá bóng", HoanThanh = true },
+            new Todo { Id = 3, TenCongViec = "Chơi game", MoTa="Giải trí", HoanThanh = false },
+            new Todo { Id = 4, TenCongViec = "Học bài", MoTa="Ôn thi", HoanThanh = true }
         };
 
         public IActionResult Index()

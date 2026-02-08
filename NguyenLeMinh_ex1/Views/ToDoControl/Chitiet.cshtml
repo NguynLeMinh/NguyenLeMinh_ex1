@@ -1,18 +1,10 @@
-﻿@model NguyenLeMinh_ex1.Models.Todo
+﻿@model Todo
 
 <h2>Chi tiết công việc</h2>
 
-<p>
-    <strong>Mã công việc:</strong> @Model.Id
-</p>
-
-<p>
-    <strong>Tên công việc:</strong> @Model.TenCongViec
-</p>
-
-<p>
-    <strong>Trạng thái:</strong>
-    @(Model.HoanThanh ? "Đã hoàn thành" : "Chưa hoàn thành")
-</p>
+<p>Mã: @Model.Id</p>
+<p>Tên: @Model.TenCongViec</p>
+<p>Mô tả: @Model.MoTa</p>
+<p>Hoàn thành: @Model.HoanThanh</p>
 
 <a asp-action="Index">Quay lại</a>

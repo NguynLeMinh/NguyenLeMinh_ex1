@@ -1,13 +1,18 @@
-﻿@model NguyenLeMinh_ex1.Models.Todo
+﻿@model Todo
 
-<h2>Chỉnh sửa công việc</h2>
+<h2>Sửa công việc</h2>
 
 <form asp-action="Sua" method="post">
     <input type="hidden" asp-for="Id" />
 
     <div>
-        <label>Tên công việc</label><br />
+        <label>Tên công việc</label>
         <input asp-for="TenCongViec" />
+    </div>
+
+    <div>
+        <label>Mô tả</label>
+        <textarea asp-for="MoTa"></textarea>
     </div>
 
     <div>
@@ -15,7 +20,5 @@
         <input asp-for="HoanThanh" type="checkbox" />
     </div>
 
-    <br />
     <button type="submit">Cập nhật</button>
-    <a asp-action="Index">Quay lại</a>
 </form>
