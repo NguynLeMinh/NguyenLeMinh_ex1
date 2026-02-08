@@ -1,0 +1,30 @@
+﻿@model List<NguyenLeMinh_ex1.Models.Todo>
+
+<h2>DANH SÁCH CÔNG VIỆC</h2>
+
+<a asp-action="Tao">Tạo mới công việc</a>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>Mã công việc</th>
+        <th>Tên công việc</th>
+        <th>Trạng thái hoàn thành</th>
+        <th>Hành động</th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.Id</td>
+        <td>@item.TenCongViec</td>
+        <td>
+            <input type="checkbox" @(item.HoanThanh ? "checked" : "") disabled />
+        </td>
+        <td>
+            <a asp-action="Sua" asp-route-id="@item.Id">Sửa</a> |
+            <a asp-action="Chitiet" asp-route-id="@item.Id">Chi tiết</a> |
+            <a asp-action="Xoa" asp-route-id="@item.Id">Xóa</a>
+        </td>
+    </tr>
+}
+</table>

@@ -1,0 +1,21 @@
+﻿@model NguyenLeMinh_ex1.Models.Todo
+
+<h2>Chỉnh sửa công việc</h2>
+
+<form asp-action="Sua" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label>Tên công việc</label><br />
+        <input asp-for="TenCongViec" />
+    </div>
+
+    <div>
+        <label>Hoàn thành</label>
+        <input asp-for="HoanThanh" type="checkbox" />
+    </div>
+
+    <br />
+    <button type="submit">Cập nhật</button>
+    <a asp-action="Index">Quay lại</a>
+</form>
